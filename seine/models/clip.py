@@ -30,7 +30,7 @@ class AbstractEncoder(nn.Module):
 
 
 class FrozenCLIPEmbedder(AbstractEncoder):
-    """Uses the CLIP transformer encoder for text (from Hugging Face)"""
+    """Uses the CLIP transformer encoder for text (from Hugging Face_20)"""
     # def __init__(self, version="openai/clip-vit-huge-patch14", device="cuda", max_length=77):
     def __init__(self, path, device="cuda", max_length=77):
         super().__init__()

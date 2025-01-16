@@ -238,6 +238,7 @@ def get_first_frame_as_pil(video_path):
         return first_frame_image
         
 def btn_preprocess_video_fn(video_path, width, height, start_time, end_time, center_crop, x_offset, y_offset, longest_to_width):
+    # 进行视频裁剪和变换
     fps = 8
     desired_n_frames = int(end_time-start_time)*fps
     processed_video_path = crop_and_resize_video(input_video_path=video_path, 
@@ -257,6 +258,7 @@ def btn_preprocess_video_fn(video_path, width, height, start_time, end_time, cen
 
 
 def btn_image_edit_fn(video_path, instruct_prompt, ie_force_512, ie_seed, ie_neg_prompt):
+    # 编辑第一帧图像
     """
     Generate an image based on the video and text input.
     This function should be replaced with your actual image generation logic.

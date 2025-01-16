@@ -113,6 +113,7 @@ def main(template_config, configs_list):
         # Load the initial latents at t
         ddim_init_latents_t_idx = config.ddim_init_latents_t_idx
         ddim_scheduler.set_timesteps(config.n_steps)
+        print(ddim_scheduler.timesteps)
         logger.info(f"ddim_scheduler.timesteps: {ddim_scheduler.timesteps}")
         ddim_latents_at_t = load_ddim_latents_at_t(
             ddim_scheduler.timesteps[ddim_init_latents_t_idx], ddim_latents_path=config.ddim_latents_path

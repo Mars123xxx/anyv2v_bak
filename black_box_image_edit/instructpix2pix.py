@@ -3,7 +3,7 @@ import PIL
 
 from diffusers import StableDiffusionInstructPix2PixPipeline, EulerAncestralDiscreteScheduler
 
-class InstructPix2Pix():
+class InstructPix2Pix:
     """
     A wrapper around the StableDiffusionInstructPix2PixPipeline for guided image transformation.
 
